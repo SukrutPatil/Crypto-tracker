@@ -29,13 +29,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome</h1>
+      <h1>Crypto Price Tracker</h1>
       <div className="search">
         <form action="">
           <input type="text" placeholder="Search" onChange={handleChange}/>
         </form>
         </div>
         <div className="container">
+          <div className="container-bg"></div>
         {filterCoins.map(coin =>{
           return(
             <Coin 
@@ -43,10 +44,9 @@ function App() {
             image={coin.image}
             name={coin.name}
             symbol={coin.symbol}
-            current_price={coin.current_price}
-            market_cap={coin.market_cap}
-            price_change_24h={coin.price_change_24h}
-            total_volume={coin.total_volume}
+            current_price={coin.current_price.toLocaleString("en-US")}
+            market_cap={coin.market_cap.toLocaleString("en-US")}
+            price_change_percentage_24h={coin.price_change_percentage_24h.toLocaleString("en-US")}
             />
           )
         })}
