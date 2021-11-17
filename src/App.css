@@ -102,9 +102,7 @@ h1{
     padding: 0px 10px;
 
 }
-.info{
-   
-}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -173,9 +171,6 @@ h1{
 }
 .card p{
     font-size: 12px;
-}
-.card h1{
-
 }
 
 .card strong{
